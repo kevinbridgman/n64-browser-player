@@ -1,4 +1,5 @@
 import {normalizeRom, romKey} from './rom.js';
+import {patchRom} from './patch-ui.js';
 const $ = selector => document.querySelector(selector);
 const status = $('#status');
 let started = false, loading = false, failed = false, pending = null, timer = null;
@@ -55,7 +56,8 @@ $('#start').addEventListener('click', async () => {
     if (!window.isSecureContext || !crypto.subtle) throw Error('Open this player over HTTPS or localhost.');
     if (!webglAvailable()) throw Error('WebGL is unavailable. Enable browser hardware acceleration and try again.');
     status.textContent = 'Reading and identifying your ROM locally…';
-    const {bytes, title} = normalizeRom(await file.arrayBuffer(), $('#game-choice').value);
+    const {bytes: original, title} = normalizeRom(await file.arrayBuffer(), $('#game-choice').value);
+    const bytes = await patchRom(original);
     const key = await romKey(bytes);
     const touch = $('#touch').value;
     const showTouch = touch === 'on' || (touch === 'auto' && navigator.maxTouchPoints > 0);

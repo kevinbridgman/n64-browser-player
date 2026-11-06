@@ -34,7 +34,8 @@ jobs:
       - name: Stage website only
         run: |
           mkdir public
-          cp index.html style.css player.js rom.js public/
+          cp index.html style.css player.js rom.js bps.js patch-ui.js public/
+          cp -R patches public/
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
