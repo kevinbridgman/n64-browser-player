@@ -1,1 +1,16 @@
-{"schemaVersion":1,"patches":[]}
+{
+  "schemaVersion": 1,
+  "patches": [
+    {
+      "id": "oot-child-purple-tunic-v0.1.0",
+      "name": "Child Link Purple Tunic",
+      "version": "0.1.0",
+      "game": "zelda",
+      "file": "patches/oot-child-purple-tunic-v0.1.0.bps",
+      "baseSha256": "49acd3885f13b0730119b78fb970911cc8aba614fe383368015c21565983368d",
+      "sha256": "b03dd3242198ec9c59f6bfd6239ac3cbe8701e191f2d4cf2cb028fc22487038d",
+      "targetSha256": "3a910b4c286ecad4e9b07dc57828bf0c365f106d536feb60527fdf0787a18048",
+      "description": "Child Link wears a purple Kokiri outfit. Requires Ocarina of Time USA Rev B (NTSC 1.2). Adult tunic colors are preserved. Modified games have separate browser saves."
+    }
+  ]
+}
