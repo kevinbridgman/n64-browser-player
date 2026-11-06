@@ -1,0 +1,10 @@
+node_modules/
+public/
+*.z64
+*.v64
+*.n64
+*.zip
+*.sra
+*.eep
+*.fla
+*.sav

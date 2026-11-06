@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Play your own Nintendo 64 ROMs locally in your browser.">
+  <title>N64 Browser Player</title><link rel="stylesheet" href="./style.css">
+</head>
+<body><main>
+  <header><span class="eyebrow">LOCAL PLAY · NINTENDO 64</span><h1>Back to the classics.</h1><p>Your games. Your controller. Right in your browser.</p></header>
+  <section class="games" aria-label="Featured games">
+    <button type="button" class="game-card smash" data-game="smash"><span class="number">01 / VERSUS</span><strong>Super<br>Smash Bros.</strong><span>Four controllers. One arena.</span></button>
+    <button type="button" class="game-card zelda" data-game="zelda"><span class="number">02 / ADVENTURE</span><strong>Ocarina<br>of Time</strong><span>A return to Hyrule.</span></button>
+  </section>
+  <section class="panel" id="setup"><h2>Load your game</h2><p>Choose a ROM from your device. This page reads it locally; it does not upload your game.</p>
+    <label for="game-choice">Game</label><select id="game-choice"><option value="auto">Auto-detect / other N64 game</option><option value="smash">Super Smash Bros. 64</option><option value="zelda">The Legend of Zelda: Ocarina of Time</option></select>
+    <label for="rom">ROM file</label><input type="file" id="rom" accept=".z64,.v64,.n64"><small>Uncompressed .z64, .v64, or .n64 · maximum 64 MB</small>
+    <label for="touch">Touch controls</label><select id="touch"><option value="auto">Automatic</option><option value="on">On</option><option value="off">Off</option></select>
+    <button id="start" class="primary">Start game <span aria-hidden="true">↗</span></button>
+  </section>
+  <p id="status" role="status" aria-live="polite">Choose a game to begin.</p>
+  <section id="play" hidden aria-label="Emulator"><h2 id="playing-title">Now playing</h2><div id="game"></div><p id="save-status" role="status" aria-live="polite"></p><div class="actions"><button id="store" disabled>Store game save now</button><button id="restart">Choose another game</button></div><p>Open the emulator menu to configure keyboard or controller mappings, use save states, and download or restore save backups. For Smash, connect up to four controllers and assign each player in the controls menu.</p></section>
+  <section class="help"><h2>Before you jump in</h2><details><summary>Controllers & keyboard</summary><p>Connect your controller and press a button, then map it in the emulator’s controls menu. Map the analog stick, A/B, C buttons, Z, L/R and Start. Click the game before using the keyboard. Bluetooth and USB controllers depend on browser support.</p></details><details><summary>Keeping your progress</summary><p>Use the game’s own save feature first. While playing, this page attempts to store cartridge saves every five seconds. Return with the same ROM in the same browser. Download backups from the emulator menu before clearing browser data or switching devices. Save states are separate from in-game saves.</p></details><details><summary>Performance & compatibility</summary><p>Use a recent Chrome, Edge, Firefox, or Safari with WebGL enabled. Desktop with a controller is recommended; N64 performance and touch support vary by device. The emulator downloads from the EmulatorJS CDN and needs internet. This first version plays original ROMs; game patches are planned separately.</p></details></section>
+  <footer>Powered by <a href="https://emulatorjs.org/" target="_blank" rel="noreferrer">EmulatorJS</a>. No games or Nintendo assets are included. Bring your own ROM.</footer>
+</main><script type="module" src="./player.js"></script></body></html>
