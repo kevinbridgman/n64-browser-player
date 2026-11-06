@@ -2,6 +2,17 @@
   "schemaVersion": 1,
   "patches": [
     {
+      "id": "oot-child-mario-style-v0.1.0",
+      "name": "Mario-style Child Character",
+      "version": "0.1.0",
+      "game": "zelda",
+      "file": "patches/oot-child-mario-style-v0.1.0.bps",
+      "baseSha256": "49acd3885f13b0730119b78fb970911cc8aba614fe383368015c21565983368d",
+      "sha256": "309132b8ad55154a5d5ff643ad02142dd87e0d14d3b41a6108c73d774dd32ee3",
+      "targetSha256": "c4a5c12734d6dcc17d493a2057b7a9f97dfc23c5a62d9fe2b77d857c4500f033",
+      "description": "Original low-poly Mario-style mesh: red cap with M badge, round nose, moustache, blue overalls and white gloves. Uses child Link's body animations, voice, abilities and equipment; facial features are static. Requires Ocarina of Time USA Rev B (NTSC 1.2). Adult Link is unchanged. Separate browser saves."
+    },
+    {
       "id": "oot-child-purple-tunic-v0.1.0",
       "name": "Child Link Purple Tunic",
       "version": "0.1.0",
