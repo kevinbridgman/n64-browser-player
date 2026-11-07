@@ -1,6 +1,6 @@
 # N64 Browser Player
 
-A static browser player for your own Super Smash Bros. 64, The Legend of Zelda: Ocarina of Time, and other Nintendo 64 ROMs. Inspired by johto-gold-player. No ROMs, game art, or patches are distributed.
+A static browser player for your own Super Smash Bros. 64, The Legend of Zelda: Ocarina of Time, and other Nintendo 64 ROMs. Inspired by johto-gold-player. No ROMs are distributed; published mods contain BPS differences and metadata.
 
 ## Play
 
@@ -24,4 +24,6 @@ Push to a new repository's `main` branch. In Settings → Pages, select **GitHub
 
 ## Scope and validation
 
-The player loads original ROMs, local BPS patches, and versioned published mods. Published mods for Ocarina of Time USA Rev B (NTSC 1.2) include Mario-style Child Character v0.1.0 (new head/body meshes, geometric M badge, gloves and overalls) and Child Link Purple Tunic v0.1.0 (original mesh with a purple tint). The Mario-style model retains Link’s body animations, voice, abilities and equipment; facial features are static. Original ROM byte orders are normalized before integrity checks and patch application. Automated tests use synthetic headers, not game ROMs. The purple-tunic release was compiled from the pinned decompilation, reconstructed byte-for-byte with the browser BPS decoder, and visually checked in the actual browser emulator using a local test save. Full playthrough, long-term save persistence, mobile performance, and physical controller testing remain unverified. EmulatorJS is an external runtime; see [EmulatorJS](https://emulatorjs.org/) for its source, licenses and core documentation.
+The player loads original ROMs, local BPS patches, and versioned published mods. Published mods for Ocarina of Time USA Rev B (NTSC 1.2) include Mario-style Child Character v0.1.1 (new head/body meshes, geometric M badge, gloves and overalls; fixes the v0.1.0 opening drawbridge freeze) and Child Link Purple Tunic v0.1.0 (original mesh with a purple tint). The Mario-style model retains Link’s body animations, voice, abilities and equipment; facial features are static. Original ROM byte orders are normalized before integrity checks and patch application. Automated tests use synthetic headers, not game ROMs. The purple-tunic release was compiled from the pinned decompilation, reconstructed byte-for-byte with the browser BPS decoder, and visually checked in the actual browser emulator using a local test save. Full playthrough, long-term save persistence, mobile performance, and physical controller testing remain unverified. EmulatorJS is an external runtime; see [EmulatorJS](https://emulatorjs.org/) for its source, licenses and core documentation.
+
+Mario v0.1.1 uses less object memory than vanilla child Link, with a compiled budget check. Its original opening nightmare has been verified to progress past the rainy drawbridge to Kokiri Forest in the browser emulator. Start a new game on v0.1.1; avoid loading emulator save states from v0.1.0. The earlier patch remains available with a known-issue warning.
