@@ -13,6 +13,17 @@
       "description": "Mario character model with a smaller memory footprint. Fixes the v0.1.0 opening drawbridge cutscene freeze. Keeps the red cap, M badge, moustache, overalls and gloves. Uses Link's body animations, voice and abilities. Requires Ocarina of Time USA Rev B (NTSC 1.2). Separate browser saves."
     },
     {
+      "id": "oot-mario-expansion-v0.2.0",
+      "name": "Mario + Expansion Memory (Experimental)",
+      "version": "0.2.0",
+      "game": "zelda",
+      "file": "patches/oot-mario-expansion-v0.2.0.bps",
+      "baseSha256": "49acd3885f13b0730119b78fb970911cc8aba614fe383368015c21565983368d",
+      "sha256": "8bbb233755661045eec9d6da2e9d276dbc287a1afb062f1e50616a0075548948",
+      "targetSha256": "63d74bf15be2fce0a54824d825baa445b19529867e8201f820615e92e9fe1ec0",
+      "description": "Experimental Mario model with a 2 MiB scene-object bank using Expansion Pak RAM (normally about 1 MiB). Requires 8 MB RAM for the expanded bank; 4 MB systems retain vanilla allocation. Same Mario appearance as v0.1.1. Requires Ocarina of Time USA Rev B. Start a new game; incompatible with other versions' save states. Full playthrough unverified."
+    },
+    {
       "id": "oot-child-mario-style-v0.1.0",
       "name": "Mario-style Child Character",
       "version": "0.1.0",
